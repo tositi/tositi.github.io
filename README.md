@@ -1,65 +1,56 @@
-### 【Xiuno BBS 4.0 是什么？】
-Xiuno BBS 4.0 是一款轻论坛产品，前端基于 BootStrap 4.0、JQuery 3，后端基于 PHP/7 MySQL XCache/Yac/Redis/Memcached...
+# LoveWall
 
-自适应手机、平板、PC，有着非常方便的插件机制，不仅仅是一个轻论坛，还是一个良好的二次开发平台。
+#### 自我介绍
+LoveWall，顾名思义，其实就是表白墙。
+一生那么长，只为遇见你。
+#### 特色功能
+1. 点赞
+2. 发评论
+3. 发弹幕
+4. 多校区
+5. 分享页
+6. 涉证、涉H、暴力、违禁物等名词进行检测
+7. wait Update。
+#### 默认后台
+后台入口/admin  账号admin  密码521wall.cn
+#### 官方信息
+1.官方演示地址：http://lw2.demo.kres.cn  OR https://521wall.cn
 
-git： https://git.oschina.net/xiuno/xiunobbs.git
+2.官方BUG提交反馈：https://pro.kres.cn/form/index/bugsubmit
 
-### 【Xiuno BBS 4.0 带来了什么？】
-前端采用 BootStrap 4 + JQuery 3，响应式布局，自适应手机，平板，PC 设备，不再需要单独开发移动版本。
+3.官方邮箱反馈地址：admin@jishuzy.com  OR admin@mail.catni.cn
 
-对 Bootstrap 4 进行了增强和兼容，比如增加 $('#submit').button('xxx').delay(3000).location('xxx.php') 的连续操作支持。
+4.官方完整更新下载地址：https://gitee.com/ncnet/10001
 
-xiuno.js 采用了 xn. 命名空间，不再担心 js 命名冲突，完善了对常用的 php 函数的实现。
+5.官方增量更新下载地址：https://pro.kres.cn/update/get?appid=10002
 
-增加了通用的 $.each_sync() 方法，从客户端避免 ajax 并发导致的服务端并发写数据问题，简化了服务端逻辑。
+6.官方wiki文档：https://wiki.521wal.cn
+此版本将会不断更新！
+#### 软件架构
+1.前端框架：LayUI 2.4、Jquery
 
-不再支持 IE89 和以下版本，全面拥抱移动端，不用再用琢磨恶心的 css hack。
+2.后端框架：ThinkPHP 5.0.24
 
-不再强制要求 URL-Rewrite， 采用相对路径的 URL 格式，方便部署到子目录：user-login.htm
+3.图标素材：阿里巴巴
 
-图片缩略、裁切放到了客户端，不再依赖服务端 GD 库（不再担心各种 GD 漏洞和弱点）。
+4.API调用：天气网、Ncnet官方
+#### 测试环境
+1.PHP     ：7.2.11
 
-同时支持 Session 和 Token 方式登录，可以全站返回 json 数据，方便 APP 开发。
+2.Mysql   : 5.7
 
-插件机制采用 hook + overwrite 方式，方便插入，和覆盖，非常方便二次开发，并且不影响性能，不影响编译。
+3.Apache  ：2.4.35
+#### 安装教程
 
-db 层采用了更加方便的接口，可以同时支持 SQL 和 NoSQL 的方式操作数据（提倡 NoSQL)。
+1. 下载完整源码
+2. 上传源码到服务器并设置运行目录为 /public
+3. 使用伪静态规则ThinkPHP（此处不提供）
+4. 导入根目录下的 import.sql 文件，并配置application/database.php文件下的连接信息
+5. 首次使用请配置发信邮箱 \extend\PHPMailer\SendEmail.php ,否则校区审核无法通知
+6. 大功告成，开始尽情使用吧！
 
-论坛功能上更加的精简，更多功能采用插件的方式进行扩充。
-
-引入了语言包，自带简体、繁体、英文三个版本。
-
-插件中心正式开启，开发者可以入驻，开发收费插件。
-
-只需要一个博客插件，它就可以变成一个功能强大的博客。
-
-帖子支持 txt html markdown 三种格式，自带适度整合的 UMEditor 插件，修正了 UM 在 Bootstrap 4 下的很多问题。
-
-xiunophp 4.0 这个框架合并成了一个文件 xiunophp.min.php，只需要一个 include 就可以开始使用里面提供的方便的函数和全局变量。
-
-Xiuno BBS 4 正式版经历了近 2 年，7 个 beta 版本，最终定型，这可能是最后一个大版本，放心动手二次开发吧。
-
-
-### 【性能方面】
-采用静态语言编程风格，充分发挥 PHP7 OPCache 的威力。
-
-专门针对 BBS 业务的索引优化和适度的缓存。
-
-大量的运算放到了客户端，并发问题尽量由客户端控制。
-
-作者十多年从业经验带领您绕过雷区。
-
-### 【授权】
-Xiuno BBS 4.0 采用 MIT 协议发布，您可以自由修改、派生版本、商用而不用担心任何法律风险（修改后应保留原来的版权信息）。
-
-我们承诺对主程序永远免费，在没有盈利前接受正派人士的捐赠。
-
-### 【站长交流群】
-474834730
-
-### 【开发者群】
-2759536
-
-axiuno@gmail.com
-2018/1/17
+#### 参与贡献
+1. Csdn 社区、手册 (滑稽.jpg)
+2. 文案：猫腻
+3. 开发：橘子(Cheng)、Ncnet
+4. 测试：猫腻、久念
